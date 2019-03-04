@@ -12,3 +12,5 @@ After reading this great article (https://research.checkpoint.com/extracting-cod
 There are almost no checks inside the code, it's just written as a quick POC so be aware of that if you intend to use it or try it. Same applies to the loader, if you plan on using it make sure to add some checks (also there is a weird thing on the export directory of UNACEV2.DLL that makes functions, names and ordinals arrays to not be parallel so I had to do a little hack there have this in mind If you want to use the ```GetExportedFunction``` function with other DLL)
 
 Lastly, the code basically will search for the DLL file in the resources (resources are encrypted with a simple xor and a base64, just for fun :P), load it, then decrypt the ACE files from the resources and call the function ACEExport from the UNACEV dll (Make sure to check this awesome project https://github.com/FarGroup/FarManager, from which I borrowed some Headers, alongside with the Checkpoint post)
+
+To create the vulnerable ACE file you can use this excellent tool https://github.com/WyAtu/CVE-2018-20250
