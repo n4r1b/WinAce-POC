@@ -29,38 +29,38 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="UNACEFNC.h">
+    <ClInclude Include=".\Headers\ace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CALLBACK.h">
+    <ClInclude Include=".\Headers\CALLBACK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="STRUCTS.h">
+    <ClInclude Include=".\Headers\loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include=".\Headers\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="loader.h">
+    <ClInclude Include=".\Headers\STRUCTS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tools.h">
+    <ClInclude Include=".\Headers\tools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ace.h">
+    <ClInclude Include=".\Headers\UNACEFNC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\desktop\rcdata1.bin">
+    <None Include=".\Resources\rcdata1.bin">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="..\..\..\..\desktop\rcdata2.bin">
+    <None Include=".\Resources\rcdata2.bin">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="WINACE_POC.rc">
+    <ResourceCompile Include=".\Resources\WINACE_POC.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

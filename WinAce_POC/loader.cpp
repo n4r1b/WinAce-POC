@@ -33,7 +33,7 @@ BOOL fixReloc(LPVOID dll, PIMAGE_NT_HEADERS ntHeader) {
 	PIMAGE_BASE_RELOCATION baseRelocation = {};
 	DWORD imageBase = ntHeader->OptionalHeader.ImageBase;
 
-	DWORD delta = (DWORD)dll < imageBase ? (DWORD)dll : (DWORD)dll - imageBase;
+	DWORD delta = (DWORD)dll - imageBase;
 
 	relocDirectory = ntHeader->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_BASERELOC];
 	baseRelocation = (PIMAGE_BASE_RELOCATION)((CHAR *)dll + relocDirectory.VirtualAddress);
